@@ -15,7 +15,7 @@ function Navbar({ searchData }) {
         placeholder="Search a song of your choice"
         searchData={searchData}
       />
-      <Button btn_name={"Give Feedback"}/>
+      <Button>{"Give Feedback"}</Button>
     </nav>
   );
 }
