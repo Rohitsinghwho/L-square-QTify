@@ -29,7 +29,7 @@ const Section = ({title,endpoint}) => {
 
         <div className={styles.grid}>
         {
-            albums.slice(0,showAll?albums.length:6)
+            albums.slice(0,showAll?albums.length:7)
             .map((album)=>(
                 <Card
                 key={album.id}
