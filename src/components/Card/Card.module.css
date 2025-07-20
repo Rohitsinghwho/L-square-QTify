@@ -1,0 +1,43 @@
+.card{
+    width: 159px;
+    height: 232px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-black);
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.imageContainer{
+    position: relative;
+    /* border: 1px solid red; */
+
+    width: 159px;
+    height: 205px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px;
+    background-color: var(--color-white);
+}
+
+.image{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+
+.albumName{
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--color-white);
+    height: 21px;
+
+}
+
