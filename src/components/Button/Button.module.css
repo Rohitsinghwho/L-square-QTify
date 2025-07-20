@@ -10,8 +10,6 @@
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
-}
-
-.button:hover{
     cursor: pointer;
 }
+

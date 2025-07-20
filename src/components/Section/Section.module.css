@@ -7,6 +7,10 @@
     /* justify-content: space-evenly; */
 }
 
+.tabs{
+    color: var(--color-white);
+    padding: 12px 0px;
+}
 .header{
     display: flex;
     justify-content: space-between;
