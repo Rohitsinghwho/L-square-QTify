@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Card from '../Card/Card';
 import styles from "./Section.module.css"
+import Carousel from '../Carousel/Carousel';
 const Section = ({title,endpoint}) => {
     const [albums,setAlbums]=useState([]);
     const [showAll,setShowAll]=useState(false);
-    
     useEffect(()=>{
         const fetchAlbums=async()=>{
             try {
@@ -26,7 +26,7 @@ const Section = ({title,endpoint}) => {
                 {showAll?"Collapse":"Show All"}
             </button>
         </div>
-
+       {showAll?(
         <div className={styles.grid}>
         {
             albums.slice(0,showAll?albums.length:7)
@@ -40,6 +40,20 @@ const Section = ({title,endpoint}) => {
             ))
         }
         </div>
+       ):(
+         <Carousel
+         items={albums}
+         renderItem={(album)=>(
+            <Card
+             key={album.id}
+             image={album.image}
+             name={album.title}
+             follows={album.follows}
+            />
+         )}
+         uniqueNavigationKey={title.replace(/\s/g, '')} 
+         />
+       )}
     </section>
   )
 }
